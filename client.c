@@ -186,7 +186,7 @@ int add(int sockfd, MSG *msg)
 	scanf("%d",&((msg->info).age)); 
 	printf("请输入添加用户的等级: "); 
 	scanf("%d",&((msg->info).level)); 
-	printf("请输入添加用户的等级:"); 
+	printf("请输入添加用户的编号:"); 
 	scanf("%d",&((msg->info).no)); 
 	printf("请输入添加用户的工资:"); 
 	scanf("%lf",&(msg->info).salary); 
