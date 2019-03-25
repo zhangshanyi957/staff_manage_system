@@ -141,7 +141,7 @@ int land(int sockfd, MSG *msg)
 	msg->type = 1;
 	printf("请输入用户名:\n");
 	scanf("%s",msg->user.name);
-	printf("请输入密码:\n");
+	printf("请输入密码(6位):\n");
 	scanf("%s",msg->user.passwd);
 
 	//发送账号密码
@@ -178,7 +178,7 @@ int add(int sockfd, MSG *msg)
 	printf("请输入添加用户的姓名: "); 
 	scanf("%s",(msg->user).name);
 	strcpy((msg->info).name,(msg->user).name); 
-	printf("请输入添加用户的密码: "); 
+	printf("请输入添加用户的密码（6位）: "); 
 	scanf("%s",(msg->user).passwd); 
 	printf("请输入添加用户的地址: "); 
 	scanf("%s",(msg->info).addr); 
@@ -227,7 +227,7 @@ int change(int sockfd, MSG *msg)
 		scanf("%s",(msg->user).name); 
 	} 
 	//修改的密码 
-	printf("请输入要更改用户名的密码:"); 
+	printf("请输入要更改用户名的密码（6位）:"); 
 	scanf("%s",(msg->user).passwd);
 	if(send(sockfd,msg,sizeof(MSG),0)< 0) { 
 		printf("修改失败\n"); 
